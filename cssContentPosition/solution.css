@@ -1,0 +1,62 @@
+/* Apply Flexbox to container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%; /* Adjusting to leave space for margins */
+    margin: 0 auto;
+}
+
+/* Outer-centered elements */
+.outer-centered {
+    flex: 1 1 45%; /* Flex-grow, flex-shrink, and flex-basis */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Center inner elements inside outer-centered */
+.outer-centered .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Outer-left element */
+.outer-left {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Position inner element bottom left and align text */
+.outer-left .inner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+    text-align: left;
+    padding: 10px;
+}
+
+/* Outer-right element */
+.outer-right {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+/* Position inner element bottom right and align text */
+.outer-right .inner {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    text-align: right;
+    padding: 10px;
+}
